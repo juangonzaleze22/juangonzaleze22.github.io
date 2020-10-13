@@ -58,25 +58,40 @@
       url: 'https://emetbg.com/',
       src:"img/emetbg.png"
     },
-
+    {
+      name: 'Spiffy',
+      url: 'https://spiffy.com.mx/',
+      src: "img/spiffy.png"
+    },
+    {
+      name: 'Notaria 101',
+      url: 'http://notaria-101.fidelitywebs.mx/',
+      src: "img/notaria101.png"
+    },
+    {
+      name: 'Spiffy Pro',
+      url: 'https://spiffy.com.mx/pro',
+      src: "img/spiffy_pro.png"
+    },
+    {
+      name: 'Loisi Oil Team',
+      url: 'http://landing-oilsi.fidelitywebs.mx/',
+      src: "img/loisi.png"
+    }    
   ];
 
  
   portafolio.forEach(element => {
     console.log(element);
    $('#tzGallery').append(`
-    <div class="col-6 col-md-4 p-2" onclick="modal('`+element.src+`', '`+element.url+`', '`+element.name+`')">
-      <a class="lightbox">
+    <div class="col-6 col-md-4 p-2">
+      <a class="lightbox" href=`+element.url+` target="_blank">
         <img src="`+element.src+`" alt="Bridge">
         <h4 class="text-center my-2">`+element.name+`</h4>
       </a>
     </div>
   `);
   }); 
-
-  
-
-
 
 })(jQuery); // End of use strict
 function modal(src, url, name){
