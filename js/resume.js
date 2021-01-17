@@ -59,14 +59,39 @@
       src:"img/emetbg.png"
     },
     {
+      name: 'Notaria 101',
+      url: 'https://notaria101hermosillo.com/',
+      src: "img/notaria101.png"
+    },
+    {
+      name: 'Loisi Oil Team',
+      url: 'http://landing-oilsi.fidelitywebs.mx/',
+      src: "img/loisi.png"
+    },
+    {
+      name: 'Rockblade',
+      url: 'https://rockblade.netlify.app/',
+      src: "img/rockblade.png"
+    },
+    {
+      name: 'Impromine',
+      url: 'http://inpromine.com/',
+      src: "img/impromine.png"
+    },
+    {
+      name: 'Econollantas',
+      url: 'https://econollantas.com/',
+      src: "img/econollantas.png"
+    },
+    {
+      name: 'Electro Mecanic',
+      url: 'https://www.electro-metalic.com/',
+      src: "img/electro-mecanic.png"
+    },
+    {
       name: 'Spiffy',
       url: 'https://spiffy.com.mx/',
       src: "img/spiffy.png"
-    },
-    {
-      name: 'Notaria 101',
-      url: 'http://notaria-101.fidelitywebs.mx/',
-      src: "img/notaria101.png"
     },
     {
       name: 'Spiffy Pro',
@@ -74,23 +99,45 @@
       src: "img/spiffy_pro.png"
     },
     {
-      name: 'Loisi Oil Team',
-      url: 'http://landing-oilsi.fidelitywebs.mx/',
-      src: "img/loisi.png"
-    }    
+      name: 'App Spiffy Pro',
+      url_ios: 'https://apps.apple.com/us/app/spiffypro-beauty-managers/id1517904799#?platform=iphone',
+      url_android: 'https://play.google.com/store/apps/details?id=com.fidelityapps.spiffyPro',
+      src: "img/spiffyProApp.png",
+      app: true
+    },
+    {
+      name: 'App Spiffy',
+      url_ios: 'https://apps.apple.com/us/app/spiffy-belleza-a-domicilio/id1517902386',
+      url_android: 'https://play.google.com/store/apps/details?id=com.fidelityapps.spiffyApp',
+      src: "img/spiffyApp.png",
+      app: true
+    }, 
   ];
 
  
   portafolio.forEach(element => {
-    console.log(element);
-   $('#tzGallery').append(`
-    <div class="col-6 col-md-4 p-2">
-      <a class="lightbox" href=`+element.url+` target="_blank">
-        <img src="`+element.src+`" alt="Bridge">
-        <h4 class="text-center my-2">`+element.name+`</h4>
-      </a>
-    </div>
-  `);
+    console.log(element.app);
+    if (element.app){
+      $('#tzGallery').append(`
+      <div class="col-6 col-md-4 p-2 text-center ">
+        <a class="lightbox" >
+          <img src="`+element.src+`" alt="Bridge">
+          <h4 class="text-center my-2">`+element.name+`</h4>
+        </a>
+        <a class="btn-link btn" href="`+element.url_ios+`" target="_blank">Ios</a>
+        <a class="btn-link btn" href="`+element.url_android+`" target="_blank">Android</a>
+      </div>
+    `);
+    }else{
+      $('#tzGallery').append(`
+      <div class="col-6 col-md-4 p-2">
+        <a class="lightbox" href=`+element.url+` target="_blank">
+          <img src="`+element.src+`" alt="Bridge">
+          <h4 class="text-center my-2">`+element.name+`</h4>
+        </a>
+      </div>
+    `);
+    }
   }); 
 
 })(jQuery); // End of use strict

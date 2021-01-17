@@ -243,28 +243,33 @@ a:hover, a:focus, a:active {
 .lightbox{
   cursor: pointer;
 }
+
 .tz-gallery .lightbox img {
   width: 100%;
   border-radius: 0;
   position: relative;
+  height: 130px;
+  object-fit: contain;
+  transition: .2s ease-in-out;
 }
 
-.tz-gallery .lightbox:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -13px;
-  margin-left: -13px;
-  opacity: 0;
-  color: #fff;
-  font-size: 26px;
-  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f002";
- /*  font-family: "Font Awesome 5 Free";
-  content: '\f002'; */
-  pointer-events: none;
-  z-index: 9000;
-  transition: 0.4s;
+.tz-gallery .lightbox img:hover{
+  transform: scale(1.075);
 }
+
+.tz-gallery .btn{
+  background-image: linear-gradient(to top, #003d98, #0057b1, #0072c7, #008cdd, #00a7f0);
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  margin: 5px 5px 0;
+  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 20px;
+} 
+.tz-gallery .btn:hover{
+  text-decoration: none;
+}
+
 
 @media (max-width: 767px){
   .tz-gallery .lightbox:before {
@@ -273,7 +278,7 @@ a:hover, a:focus, a:active {
 }
 
 
-.tz-gallery .lightbox:after {
+/* .tz-gallery .lightbox:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -283,7 +288,7 @@ a:hover, a:focus, a:active {
   background-color: rgba(46, 132, 206, 0.7);
   content: '';
   transition: 0.4s;
-}
+} */
 
 .tz-gallery .lightbox:hover:after,
 .tz-gallery .lightbox:hover:before {
@@ -303,4 +308,8 @@ a:hover, a:focus, a:active {
   body {
       padding: 0;
   }
+  .listEdit li{
+    width: 100%;
+    margin-bottom: 5px;
+  } 
 }
