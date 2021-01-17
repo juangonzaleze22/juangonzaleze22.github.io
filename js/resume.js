@@ -89,14 +89,14 @@
       src: "img/electro-mecanic.png"
     },
     {
-      name: 'Spiffy',
-      url: 'https://spiffy.com.mx/',
-      src: "img/spiffy.png"
-    },
-    {
       name: 'Spiffy Pro',
       url: 'https://spiffy.com.mx/pro',
       src: "img/spiffy_pro.png"
+    },
+    {
+      name: 'Spiffy',
+      url: 'https://spiffy.com.mx/',
+      src: "img/spiffy.png"
     },
     {
       name: 'App Spiffy Pro',
