@@ -38,11 +38,11 @@
       url: 'https://emetenjoy.com/',
       src:"img/emetenjoy.png"
     },
-    {
+    /* {
       name: 'Xvfive',
       url: 'https://xvfive.com/',
       src:"img/xvfive.png"
-    },
+    }, */
     {
       name: 'Emetbusiness group',
       url: 'https://emetbusinessgroup.com/',
